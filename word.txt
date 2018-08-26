@@ -1,1 +1,1 @@
-add word 
+add word delete word 
