@@ -1,4 +1,6 @@
 I an luo
-<<<<<<< HEAD
 i am add by master
+=======
+i an add by lj
+add word 2
 
