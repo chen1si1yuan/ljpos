@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAAA,UAAU;EACN,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,aAAa;EACzB,KAAK,EAAE,IAAI;EACX,GAAG,EAAE,IAAI",
+"sources": ["foot_part.scss"],
+"names": [],
+"file": "foot_part.css"
+}

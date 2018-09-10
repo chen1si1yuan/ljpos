@@ -34,7 +34,7 @@
         line-height: 120px;\
         font-size: 0;\
         color: #000;\
-        min-width:1200px;\
+        min-width:100%;\
         z-index:-999;\
     }\
     .left_nav_box{\

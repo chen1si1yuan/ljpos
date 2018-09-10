@@ -1,0 +1,37 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/help\.css\/menu\.scss}line{font-family:\000031}}
+#word_part {
+  background: gainsboro;
+  display: inline-block;
+  width: 83.7%;
+  overflow: hidden;
+  position: absolute;
+  top: 120px;
+  left: 12%;
+  height: 800px;
+  padding: 20px 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/help\.css\/menu\.scss}line{font-family:\0000311}}
+#word_part .li_title {
+  padding: 10px 0;
+  height: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/help\.css\/menu\.scss}line{font-family:\0000315}}
+#word_part .li_part {
+  padding: 10px 0;
+  height: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/help\.css\/menu\.scss}line{font-family:\0000319}}
+#word_part .li_art {
+  padding: 10px 0;
+  height: 200px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/help\.css\/menu\.scss}line{font-family:\0000324}}
+button {
+  height: 50px;
+  width: 150px;
+  font-size: 20px;
+  background: gray;
+}
+
+/*# sourceMappingURL=menu.css.map */
