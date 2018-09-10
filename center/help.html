@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./css/help.css/ljApp.css" rel="stylesheet">
+    <title>帮助文档</title>
+</head>
+<body>
+    <div id="ljApp" :class='{ljapp:fg}'>
+        <ul>
+            <menu-list :class={menu_li:fg} v-for="item in menuList" :name='item.name' :id='item.id'>
+        </menu-list>
+        </ul> 
+    </div>
+    <div id="word_part">
+        <art_part 
+        :li_title='li_title' 
+        :li_part1='li_part1' 
+        :li_part2='li_part2'
+        :li_art1='li_art1'
+        :li_art2='li_art2'
+        ></art_part>
+    </div>
+    <script src="./js/homepage.js/pagehome_assemble.js" async></script>
+    <script src="./js/_vue@2.5.17@vue/dist/vue.min.js"></script>
+    <script src="./js/help.js/ljApp.js" type="text/javascript"></script>
+    <script>
+        var list_li1 = new Vue({
+            el:"#word_part",
+            data:{
+                li_title:"入门指南",
+                li_part1:"平台简介",
+                li_part2:"平台操作流程",
+                li_art1:"中控",
+                li_art2:"登录注册实名认证",
+            },
+            components:{
+                "art_part":{
+                    template:'<div>\
+                        <h2 class="li_title">{{li_title}}</h2>\
+                        <h3 class="li_part1 li_part">{{li_part1}}</h3>\
+                        <p class="li_art1 li_art">{{li_art1}}</p>\
+                        <h3 class="li_part2 li_part">{{li_part2}}</h3>\
+                        <p class="li_art2 li_art">{{li_art2}}</p>\
+                        <button @click="change">点击切换</button>\
+                    </div>',
+                    props:['li_title','li_part1','li_part2','li_art1','li_art2'],
+                    methods:{
+                        change:function(){
+                            this.li_title='应用服务指南'
+                        }
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

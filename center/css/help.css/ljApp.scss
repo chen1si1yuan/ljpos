@@ -1,0 +1,48 @@
+body{
+    position: relative;
+}
+#ljApp{
+    overflow: hidden;
+    margin-top: 120px;
+    display: inline-block;
+    position: absolute;
+}
+.ljapp{
+    height: 500px;
+    width: 12%;
+    background: gray;
+}
+.menu_li{
+    height: 50px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    &:hover{
+        background: darkgray;
+        cursor: pointer;
+    }
+}
+#word_part{
+  background: gainsboro;
+  display: inline-block; 
+  width: 85%;
+  overflow: hidden;
+  position: absolute;
+  top: 120px;
+  left: 12%;
+  height: 800px;
+  padding: 20px 30px;
+  .li_title{
+      padding: 10px 0 ;
+      height: 30px;
+  }
+  .li_part{
+      padding: 10px 0;
+      height: 30px;
+  }
+  .li_art{
+      padding: 10px 0;
+      height: 200px;
+  }
+}
+

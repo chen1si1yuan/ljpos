@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+* .wrapper {
+  background-color: #ccc;
+  width: 200px;
+  height: 200px;
+}
+* .wrapper .nav {
+  height: 50px;
+  width: 50px;
+  background-color: aqua;
+}
+* .wrapper .nav:hover {
+  background-color: aquamarine;
+}

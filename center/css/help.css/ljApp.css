@@ -1,0 +1,62 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/WorkSpace\/vue\/vueLearn\/NlpPlatform\/center\/css\/help\.css\/ljApp\.scss}line{font-family:\000031}}
+body {
+  position: relative;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/WorkSpace\/vue\/vueLearn\/NlpPlatform\/center\/css\/help\.css\/ljApp\.scss}line{font-family:\000034}}
+#ljApp {
+  overflow: hidden;
+  margin-top: 120px;
+  display: inline-block;
+  position: absolute;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/WorkSpace\/vue\/vueLearn\/NlpPlatform\/center\/css\/help\.css\/ljApp\.scss}line{font-family:\0000310}}
+.ljapp {
+  height: 500px;
+  width: 12%;
+  background: gray;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/WorkSpace\/vue\/vueLearn\/NlpPlatform\/center\/css\/help\.css\/ljApp\.scss}line{font-family:\0000315}}
+.menu_li {
+  height: 50px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/WorkSpace\/vue\/vueLearn\/NlpPlatform\/center\/css\/help\.css\/ljApp\.scss}line{font-family:\0000320}}
+.menu_li:hover {
+  background: darkgray;
+  cursor: pointer;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/WorkSpace\/vue\/vueLearn\/NlpPlatform\/center\/css\/help\.css\/ljApp\.scss}line{font-family:\0000325}}
+#word_part {
+  background: gainsboro;
+  display: inline-block;
+  width: 85%;
+  overflow: hidden;
+  position: absolute;
+  top: 120px;
+  left: 12%;
+  height: 800px;
+  padding: 20px 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/WorkSpace\/vue\/vueLearn\/NlpPlatform\/center\/css\/help\.css\/ljApp\.scss}line{font-family:\0000335}}
+#word_part .li_title {
+  padding: 10px 0;
+  height: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/WorkSpace\/vue\/vueLearn\/NlpPlatform\/center\/css\/help\.css\/ljApp\.scss}line{font-family:\0000339}}
+#word_part .li_part {
+  padding: 10px 0;
+  height: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/WorkSpace\/vue\/vueLearn\/NlpPlatform\/center\/css\/help\.css\/ljApp\.scss}line{font-family:\0000343}}
+#word_part .li_art {
+  padding: 10px 0;
+  height: 200px;
+}
+
+/*# sourceMappingURL=ljApp.css.map */
