@@ -14,7 +14,7 @@
         <ul>
             <menu-list :class={menu_li:fg} v-for="item in menuList" :name='item.name' :id='item.id'>
         </menu-list>
-        </ul> <foot_part></foot_part>
+        </ul>
     </div>
     <div id="word_part">
         <art_part 
@@ -25,24 +25,10 @@
         :li_art2='li_art2'
         ></art_part>
     </div>
-    <footer id="foot_part">
-        {{foot}}
-    </footer>
     <script src="./js/homepage.js/pagehome_assemble.js" async></script>
     <script src="./js/_vue@2.5.17@vue/dist/vue.min.js"></script>
     <script src="./js/help.js/ljApp.js" type="text/javascript"></script><!--左边列表部分-->
     <script src="./js/help.js/menu.js" type="text/javascript"></script><!--//右边详情部分-->
     <script src="./js/help.js/foot_part.js" type="text/javascript"></script>
-    <script>
-        Vue.component('foot_part',{
-            template:'<div style="height:50px;width:100px;background:red;">lalal</div>'
-        })
-    var foot_part=new Vue({
-        el:"#foot_part",
-        data:{
-            foot:"ladjf"
-        }
-    })
-    </script>
 </body>
 </html>
