@@ -1,5 +1,5 @@
 $main-color:ghostwhite;
-$header-hover-color:gray;
+$header-hover-color:rgb(205, 197, 197);
 @mixin hover-event {
     cursor: pointer;
     background: $header-hover-color;
@@ -91,7 +91,6 @@ header{
                         color: black;
                     }
                     .menu-child{
-                        display: none;
                         background: $main-color;
                         padding: 0px;
                         li{
@@ -130,4 +129,11 @@ header{
             }
         }
     }
+}
+
+.active{
+    background: gray;
+}
+.target{
+    display: none;
 }

@@ -97,7 +97,7 @@ header .header-container .header-menu .header-menu-ul .header-menu-li {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\0000383}}
 header .header-container .header-menu .header-menu-ul .header-menu-li:hover {
   cursor: pointer;
-  background: gray;
+  background: #cdc5c5;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\0000386}}
 header .header-container .header-menu .header-menu-ul .header-menu-li:hover .menu-child {
@@ -110,49 +110,58 @@ header .header-container .header-menu .header-menu-ul .header-menu-li a {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\0000393}}
 header .header-container .header-menu .header-menu-ul .header-menu-li .menu-child {
-  display: none;
   background: ghostwhite;
   padding: 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\0000397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\0000396}}
 header .header-container .header-menu .header-menu-ul .header-menu-li .menu-child li {
   list-style: none;
   transition: all .2s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\0000399}}
 header .header-container .header-menu .header-menu-ul .header-menu-li .menu-child li:hover {
   cursor: pointer;
-  background: gray;
+  background: #cdc5c5;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\00003108}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\00003107}}
 header .header-container .header-user {
   height: 50px;
   width: 20%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\00003111}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\00003110}}
 header .header-container .header-user .header-btn {
   padding: 9px;
   width: 70%;
   float: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\00003115}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\00003114}}
 header .header-container .header-user .header-btn span {
   display: inline-block;
   padding: 5px 15px;
   background: gainsboro;
   border-radius: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\00003119}}
 header .header-container .header-user .header-btn span:hover {
   cursor: pointer;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\00003122}}
 header .header-container .header-user .header-btn span a {
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\00003125}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\00003124}}
 header .header-container .header-user .header-btn span a:hover {
   color: blue;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\00003134}}
+.active {
+  background: gray;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunny\/Desktop\/kayla\/mac_pos\/center\/css\/homepage\.css\/headerPart\.scss}line{font-family:\00003137}}
+.target {
+  display: none;
 }
 
 /*# sourceMappingURL=headerPart.css.map */
