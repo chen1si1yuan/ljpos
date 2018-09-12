@@ -8,48 +8,22 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <header id="header-part">
         <div class="header-container">
             <div class="header-title">
                 <div class="header-logo">
-                     <img class="header-logo-pic" src="./images/lg-img/WechatIMG15.jpeg">
+                        <img class="header-logo-pic" :src='logourl'>
                 </div>
                 <div class="header-title-box">
-                    <span class="header-title-word">中控服务开放平台</span>
+                    <span class="header-title-word"><a href="#">中控服务开放平台</a></span>
                 </div>
                 
             </div>
             <div class="header-menu">
-                <ul class="header-menu-ul">
-                    <li class="header-menu-li"><a href="#">服务商城</a>
-                        <ul class="menu-child">
-                            <li><a href="#">故宫问答</a></li>
-                            <li><a href="#">猜数字</a></li>
-                            <li><a href="#">石头剪刀布</a></li>
-                            <li><a href="#">等等</a></li>
-                        </ul>
-                    </li>
-                    <li class="header-menu-li"><a href="#">解决方案</a>
-                        <ul class="menu-child">
-                            <li><a href="#">故宫问答</a></li>
-                            <li><a href="#">猜数字</a></li>
-                            <li><a href="#">石头剪刀布</a></li>
-                            <li><a href="#">等等</a></li>
-                        </ul>
-                    </li>
-                    <li class="header-menu-li"><a href="#">创建应用</a>
-                        <ul class="menu-child">
-                            <li><a href="#">故宫问答</a></li>
-                            <li><a href="#">猜数字</a></li>
-                            <li><a href="#">石头剪刀布</a></li>
-                            <li><a href="#">等等</a></li>
-                        </ul></li>
-                    <li class="header-menu-li"><a href="#">帮助中心</a>
-                        <ul class="menu-child">
-                            <li><a href="#">故宫问答</a></li>
-                            <li><a href="#">猜数字</a></li>
-                            <li><a href="#">石头剪刀布</a></li>
-                            <li><a href="#">等等</a></li>
+                <ul class="header-menu-ul" v-for='nav in nav'>
+                    <li class="header-menu-li"><a href="#">{{nav.title}}</a>
+                        <ul v-if=nav.subnav class="menu-child">
+                            <li v-for='i in nav.subnav'><a href="#">{{i.value}}</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -62,41 +36,35 @@
             </div>
         </div> 
     </header>
-    <div id='body-part'>
-        <nav-part><title1 slot='s1'></title1><title2 slot='s2'></title2></nav-part>
-    </div>
-    <script src="./js/_vue@2.5.17@vue/dist/vue.min.js"></script>
+    <script src="./js/vue.js"></script>
     <script>
-        Vue.component('nav-part',{
-            template:'<div><slot name="s1"></slot>导航栏<slot name="s2"></slot></div>',
-            data:function(){
-                return{
-                    mag:"父亲"
-                }
-            }
-        })
         var myapp = new Vue({
-            el:"#body-part",
-            components:{
-                'title1':{
-                    template:'<h1>{{child1}}</h1>',
-                    data:function(){
-                        return{
-                            child1:"子组件"
-                        }
-                    }
-                },
-                'title2':{
-                    template:'<h2>{{child2}}</h2>',
-                    data:function(){
-                        return{
-                            child2:'子组件2'
-                        }
-                    }
-                }
-            },
+            el:"#header-part",
             data:{
-                mag:"dif"
+                logourl:"./images/lg-img/WechatIMG15.jpeg",
+                nav:[ 
+                    {title:"服务商城",url:"",subnav:[
+                            {value:"故宫问答",url:""},
+                            {value:"故宫问答",url:""},
+                            {value:"故问答",url:""}
+                        ]
+                    },
+                    {title:"解决方案",url:"",subnav:[
+                            {value:"解决方案",url:""},
+                            {value:"解决方案",url:""},
+                            {value:"解决方案",url:""},
+                            {value:"解决方案",url:""}
+                        ]
+                    },
+                    {title:"创建应用",url:"",subnav:[]
+                    },
+                    {title:"帮助中心",url:"",subnav:[
+                            {value:"帮助中心",url:""},
+                            {value:"帮助中心",url:""},
+                            {value:"帮助中心",url:""}
+                        ]
+                    }
+                ]
             }
         })
     </script>
