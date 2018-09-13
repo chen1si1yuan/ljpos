@@ -13,9 +13,9 @@ Vue.component(
                             </div>
                             <div class="header-menu">
                                 <ul class="header-menu-ul" >
-                                    <li class="header-menu-li" :class="{active:nav.id==flog}"  @click="active(nav.id)" v-for='nav in nav'><a href="#">{{nav.title}}</a>
+                                    <li class="header-menu-li" :id=nav.className @mouseover="headerover(nav.id)" @mouseout="headerout"  @click="changeActive(nav.id)" :class="{headeractive:nav.id==flog,headerhovser:nav.id==hovershow}" v-for='nav in nav'><a :href="nav.url">{{nav.title}}</a>
                                         <ul v-if=nav.subnav class="menu-child" :class="{target:show}">
-                                            <li v-for='childLi in nav.subnav' @click="goto(childLi)"><a href="#">{{childLi.value}}</a></li>
+                                            <li @click="goto(childLi.url)" v-for='childLi in nav.subnav' ><a :href="childLi.url">{{childLi.value}}</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -23,8 +23,8 @@ Vue.component(
 
                             <div class="header-user">
                                     <div class="header-btn">
-                                        <span><a href="#">登录</a></span>
-                                        <span><a href="#">注册</a></span>
+                                        <span>登录</span>
+                                        <span>注册</span>
                                     </div>
                             </div>
                         </div> 
@@ -34,39 +34,42 @@ Vue.component(
                 logourl:"./images/lg-img/WechatIMG15.jpeg",
                 flog:0,
                 show:true,
+                hovershow:0,//鼠标移动上去
                 nav:[ 
-                    {id:1,title:"服务商城",url:"",subnav:[
-                            {id:1,value:"故宫问答",url:""},
-                            {id:2,value:"故宫问答",url:""},
-                            {id:3,value:"故问答",url:""}
+                    {className:"headerli1",id:1,title:"服务商城",url:"",subnav:[
+                            {id:1,value:"故宫问答",url:"index.html"},
+                            {id:2,value:"故宫问答",url:"help.html"},
+                            {id:3,value:"故问答",url:"index.html"}
                         ]
                     },
-                    {id:2,title:"解决方案",url:"",subnav:[
-                            {id:1,value:"解决方案",url:""},
-                            {id:2,value:"解决方案",url:""},
-                            {id:3,value:"解决方案",url:""},
-                            {id:4,value:"解决方案",url:""}
-                        ]
+                    {className:"headerli2",id:2,title:"解决方案",url:"solution.html",subnav:[]
                     },
-                    {id:3,title:"创建应用",url:"",subnav:[]
+                    {className:"headerli3",id:3,title:"创建应用",url:"app.html",subnav:[]
                     },
-                    {id:4,title:"帮助中心",url:"",subnav:[
-                            {id:1,value:"帮助中心",url:""},
-                            {id:2,value:"帮助中心",url:""},
-                            {id:3,value:"帮助中心",url:""}
-                        ]
+                    {className:"headerli4",id:4,title:"帮助中心",url:"help.html",subnav:[]
                     }
                 ]
             }
         },
     methods:{
         //某一菜单被选中
-        active:function(index){
-            this.flog=index
+        changeActive:function(index){
+            this.flog=index;
+        },
+        headerover:function(index){
+            if(index==1){
+                
+            }
+            if(index!=1){
+                this.hovershow=index;
+            }
+        },
+        headerout:function(){
+            this.hovershow=0;
         },
         //子菜单点击事件
         goto:function(index){
-            console.log(index.id);
+            console.log(index);
         }
     }
     }

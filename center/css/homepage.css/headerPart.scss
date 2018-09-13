@@ -2,7 +2,7 @@ $main-color:ghostwhite;
 $header-hover-color:rgb(205, 197, 197);
 @mixin hover-event {
     cursor: pointer;
-    background: $header-hover-color;
+    background: darkgray;
 }
 body{
     position: relative;
@@ -21,6 +21,8 @@ width: 100%;
 }
 //头部
 header{
+    position: relative;
+    z-index: 99;
     background:$main-color;
     height: 50px;
     width: 100%;
@@ -76,17 +78,16 @@ header{
                     list-style: none;
                     float: left;
                     height: 50px;
-                    width: 20%;
-                    margin: 0px 10px;
+                    width: 24%;
                     line-height: 50px;
                     transition: all .2s;
-                    &:hover{
-                        @include hover-event();
-                    }
                     &:hover .menu-child{
                         display: block;
                     }
                     a{
+                        display: inline-block;
+                        height: 100%;
+                        width: 100%;
                         text-decoration: none;
                         color: black;
                     }
@@ -130,9 +131,12 @@ header{
         }
     }
 }
-
-.active{
+.headeractive{
     background: gray;
+}
+.headerhovser{
+    background: darkgray;
+    cursor: default;
 }
 .target{
     display: none;
