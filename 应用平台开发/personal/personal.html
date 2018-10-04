@@ -5,10 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="css/app.css" rel="stylesheet">
     <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
     <script src="js/vue.js" type="text/javascript"></script>
+    <script src="js/vue-router.js" type="text/javascript"></script>
+    <script src="js/axios.js" type="text/javascript"></script>
 </head>
 <body>
-    
+    <h1>服务商城</h1>
+<div id="app">
+        <div>
+           所有服务有： <span>{{allservice}}</span>
+        </div>
+    <router-link to='/NLP'>NLP</router-link>
+    <router-link to='/page1'>page1</router-link>
+    <router-view></router-view>
+</div>
+<template id="NLP">
+  <div class="appbox">
+    <div class="appcon">
+        <div class="app-Left">
+            <div style="display:flex">
+                <div class="app-title-pic">
+                    <img src="img/WechatIMG15.jpeg">
+                </div>
+                <div class="app-title-word">name1</div>                
+            </div>
+            <div class="app-discript">
+                <table>
+                    <tr>
+                        <td>解决方案 : </td>
+                        <td>提供商 : fgdfg</td>
+                        <td>使用量 :dfgzdfg</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="app-right">
+                
+        </div>
+    </div>  
+    <div>
+        <h3>服务详情<input type="button" @click="getinfo" value="获得信息"></h3>
+        <table>
+            <tr>
+                <td>采用方案</td>
+                <td>{{blueprintName}}</td>
+            </tr>
+            <tr>
+                <td>提供商</td>
+                <td>{{Provider}}</td>
+            </tr>
+            <tr>
+                <td>详情</td>
+                <td>{{Descript}}</td>
+            </tr>    
+        </table>
+    </div> 
+</template>
+</div>
+<script>
+    var NLP = {
+        template:"#NLP",
+        data:function(){
+            return{
+                id:1,
+                blueprintName:"",
+                Provider:"",
+                Descript:""
+            }
+        },
+        methods:{
+            getinfo(){
+                var url='http://6ed91499.ngrok.io/ccappopenplatform-domain-web/service/'+this.id
+                axios.get(url).then(response=>{
+                    if(response.status===200){
+                        if(response.data!=null){
+                            var data= response.data.data;
+                            this.blueprintName=data.blueprintName
+                            this.Provider=data.Provider;
+                            this.Descript = data.Descript;
+                          // for(item in response.data.data.reply[0].service){
+                           //    this.allservice+=response.data.data.reply[0].service[item].name+"  "
+                         //  }
+                        }
+                    }else{
+                        console.log("获取数据失败")
+                    }
+                })
+            }
+        }
+    }
+    var page1 = {
+        template:"<h1>page1</h1>"
+    }
+    const router = new VueRouter({
+        routes:[
+            {path:'/',component:NLP},
+            {path:'/NLP',component:NLP},
+            {path:'/page1',component:page1}
+        ]
+    })
+    var myapp = new Vue({
+        el:"#app",
+        router:router,
+        data:{
+            'allservice':""
+        },
+        mounted() {
+                var url='http://6ed91499.ngrok.io/ccappopenplatform-domain-web/allservice'
+                axios.get(url).then(response=>{
+                    if(response.status===200){
+                        if(response.data!=null){
+                           for(item in response.data.data.reply[0].service){
+                               this.allservice+=response.data.data.reply[0].service[item].name+"  "
+                           }
+                        }
+                    }else{
+                        console.log("获取数据失败")
+                    }
+                }),
+                axios.get('http://6ed91499.ngrok.io/ccappopenplatform-domain-web/allservice/1').then(response=>{
+                    if(response.status===200){
+                        if(response.data!=null){
+                           console.log(response.data)
+                        }
+                    }else{
+                        console.log("获取数据失败")
+                    }
+                })
+        },
+        methods:{
+          
+        }
+    })
+</script>
 </body>
 </html>
