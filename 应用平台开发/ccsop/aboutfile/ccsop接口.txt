@@ -1,6 +1,0 @@
-baseUrl：http://192.168.1.161:8080
-登录图片验证码：/login/verificationCode
-登录：'/login/doLogin'   @Params{#post#account,password,verificationCode,autoLogin}
-注册手机验证码：/regist/getPhoneVCode   @Params{#post#account}
-注册：/regist/doRegist    @Params{#post#account,password,verificationCode}
-密码找回：/regist/findBackPWD   @Params{#post#account,password,verificationCode}
